@@ -96,11 +96,21 @@ Figure 13: Command to run the script for importing
 
 
 Figure 14: Output data loaded into elasticsearch
-5.	Code submission
+
+
+
+5.	ETL as Batch Process
+
+
+
+6.	Code submission
 
 The code has been submitted on github. The link is given below:
 https://github.com/SograMemon/DataWarehouse-A2.git
-6.	References
+
+
+
+7.	References
 
 
 [1]	“Python Sentiment Analysis – Python Tutorial.” [Online]. Available: https://pythonspot.com/python-sentiment-analysis/. [Accessed: 07-Jun-2018].
@@ -115,6 +125,5 @@ https://github.com/SograMemon/DataWarehouse-A2.git
 [9]	 https://github.com/ayushoriginal/Sentiment-Analysis-Twitter
 [10]	 https://github.com/mayank93/Twitter-Sentiment-Analysis
 [11]	 https://github.com/abdulfatir/twitter-sentiment-analysis
-
-
-
+[12]	 https://stackoverflow.com/questions/18960689/ubuntu-says-bash-program-permission-denied
+[13]       https://stackoverflow.com/questions/16828035/linux-command-to-check-if-a-shell-script-is-running-or-not
