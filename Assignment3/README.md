@@ -1,37 +1,37 @@
 
 ## 1.	Task Description
 
-# 1.1	Objectives
+### 1.1	Objectives
 
 The objective of this assignment is to utilize the Stream and Mlib functionalities of Apache Spark. The Stream function will be used to stream live tweets, using the tweeter API, into the EC2 instance created on Amazon Web Services. A portion of the extracted tweets are used for training a classifier and the remaining tweets are used for testing the accuracy of the Trained classifier. The tweeter data has to be cleaned to remove the noise which can be in the form of emojis, hashtags and retweets. The classifier will be given a test set of tweets all of which are labeled either as positive, negative or neutral. The classifier will be trained using the Spark Mlib library.
 
-# 1.2	Problem Scenario
+### 1.2	Problem Scenario
 
 Twitter data is quite large but twitter has place some restrictions on the number of tweets that can be accessed for free per day. This project aims to collect the unstructured, incomprehensible twitter data to draw some meaning from it by performing sentiment analysis. The twitter data has to be cleaned to remove information such as URls and emojies as they cannot be analyzed for a sentiment. The tweets can be streamed into Spark and then the Mlib library of spark can be used to train the chosen Machine Learning model. The trained model can then be used to predict the sentiment of each of the streamed tweets.
 
-# 1.3	Database
+### 1.3	Database
 
 Tweeter API can be used to formulate queries. This allows us to gather the tweets on selected topic. The tweets can also be filtered based on other parameters such as location and language. It is required for this project to extract a minimum of 2000 tweets. Tweets from an airline database has been used for training the model for the machine learning part.
 
 ## 2.	Twitter Tweet Extraction
 
-# 1.1	Prerequisites for using tweeter API
+### 2.1	Prerequisites for using tweeter API
 
 For this project we were required to extract twitter data, transform it for analysis, perform lexicon based sentiment analysis and then import it into an elastic search instance. All these operations have to be performed on an AWS EC2 instance Ubuntu virtual machine. Therefore, the prerequisites for the extraction of data is to first set up an EC2 instance and then install the required dependencies and libraries on the remote EC2 instance. The dependencies that need to be installed include: python3 for running python files, tweepy to use the twitter API for extracting tweets and a lexicon dictionary for the sentiment analysis.
 
 The twitter API requires the user to create a developer twitter account and an app on that account to generate an API key. This API Key is unique to each user and allows users to access the twitter API
 
-# 1.2	Setting up Spark on the EC2 instance 
+### 2.2	Setting up Spark on the EC2 instance 
 
 This project uses Spark because Spark provides native binding for Java, Scala, Python and R. Spark also supports high speed live data streaming, machine learning, SQL and graph processing. Spark provides one platform for all the data mining and analysis needs. Spark also provides distributed processing. Spark provides the functionalities of map reduce while also allowing users to use SQL syntax for distributed programing.
 
 Spark installation requires java and python to be installed on the Ubuntu virtual machine. The following diagram shows the commands required to connect to the EC2 instance and then to install Python, Java and Spark. The screenshot also shows the commands to submit jobs to the Spark instance.
 
-# 1.3	Setting up tweets Listener
+### 2.3	Setting up tweets Listener
 
 A Python script is written to provide the authentication required for accessing tweets from the tweeter API. The tweeter API provides a stream listener class which can be defined and extended so that an object of this class can perform functions to process the tweets as they are streamed. The filter function retrieves the tweets that match the specification provided. The tokenizer function breaks the tweets into tokens and filters them. In this python script we also set a port that listens to the incoming tweets. 
 
-# 1.4	Cleaning and transforming twitter data
+### 2.4 Cleaning and transforming twitter data
 
 Tweets can contain a lot of special characters, emojis and URLs. These can produce a lot of problems in sentiment analysis by machine learning and hence these characters have to be removed before the sentiment analysis algorithm can be applied. In order to accomplish this the text field is stored in a data frame which uses the numpy python library. Storing the text that has been tweeted allows to perform operations on the text so that the unwanted data such as emojis, URLs, nextline and hashtags can be removed. 
 
