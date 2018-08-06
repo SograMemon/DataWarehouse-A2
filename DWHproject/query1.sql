@@ -1,0 +1,3 @@
+select Geoname, o24_65_years_and_over,aa720_80000_and_over
+from dwhproj.pivot
+group by o24_65_years_and_over,aa720_80000_and_over DESC;
